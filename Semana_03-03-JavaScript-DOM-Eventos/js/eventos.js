@@ -43,3 +43,4 @@ document.getElementById('main').addEventListener("click", function (evt) {
     let resultados = document.getElementById('resultadosEventos');
     resultados.innerHTML += `Recibió el evento main<br/>`;
 });
+

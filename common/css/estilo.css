@@ -5,14 +5,14 @@
 
 html,
 body {
-    background-color: #E3EDF8;
+    background-color: #fafafa;
 }
 
-div.contenedor {
+.contenedor {
     padding: 1rem 2rem;
 }
 
-div.contenedor-flex {
+.contenedor-flex {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -99,10 +99,6 @@ main li {
     color: #0B1623
 }
 
-main li {
-    color: orange;
-}
-
 main li a,
 main li a:hover,
 main li a:active,
@@ -143,11 +139,57 @@ table tr:nth-child(even) {
 }
 
 table tr:nth-child(odd) {
-    background-color: #e7e7e7;
+    background-color: #ededed;
 }
 
 table th,
 table td {
-    padding: 0.25rem 0.5rem;
-    border: 1px solid #CCC;
+    padding: 0.5rem 1rem;
+    border: 0px;
+}
+
+
+nav{    
+    display: flex;
+    justify-content: center;
+    background-color: #474747;
+    border-bottom: 0.5rem solid #474747;   
+}
+
+nav div.contenedor {
+    width: 80%;
+    min-width: 300px;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+
+    list-style-type: none;
+}
+
+nav ul li a,
+nav ul li a:link,
+nav ul li a:visited,
+nav ul li a:active,
+nav ul li a:focus {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+nav ul li a:hover{
+    color: white;
+    background-color: #6f6f6f;
+}
+
+div.resultados li{
+    color: orangered;
 }

@@ -4,20 +4,25 @@ form fieldset{
     width: 640px;
     height: auto;
 
-    background-color: rgb(247, 247, 247);
+    background-color: #e8e8e8;
     
-    border: 1px solid #CCC;
+    border: 1px solid rgb(170, 170, 170);
     border-radius: 3px;
-    -border-radius: 3px;
 }
 
 form fieldset legend{
-    color: #0D47A1;
+    padding: 0.5rem 1rem;
+    color: orangered;
     
     font-family: Arial, sans-serif;
     font-size: 14px;
-    font-weight: normal;
+    font-weight: bolder;
+    text-transform: uppercase;
     text-decoration: none;
+
+    background-color: #fafafa;
+    border: 1px solid #CCC;
+    border-radius: 3px;
 }
 
 form fieldset div.fila{

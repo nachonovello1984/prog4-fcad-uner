@@ -17,8 +17,18 @@
 
         </div>
     </header>
+    <nav>
+        <div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="01-dom.html">DOM (Document Object Model)</a></li>
+                <li><a href="02-eventos.html">Eventos</a></li>
+                <li><a href="03-dom-page-load.html">Acciones en el DOM una vez que cargue la página</a></li>
+            </ul>
+        </div>
+    </nav>
     <main>
-        <div class="contenedor">
+        <article class="contenedor">
             <h2>DOM esperar a que DOM esté completamente cargado</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit vestibulum mi, non blandit
                 nibh
@@ -78,11 +88,12 @@
             <ul>
                 <li><a href="index.html">Ir a inicio</a></li>
             </ul>
-        </div>
+        </article>
     </main>
     <script defer>
         window.setInterval(() => console.log("main"), 1);
 
+        //Cuando están cargados todos los recursos (imágenes, hojas de estilo, etc.)
         window.addEventListener("load", function () {
             const p = document.createElement("p");
             time = document.createTextNode(`window.load! Time: ${(new Date()).toLocaleString()}`);
@@ -94,6 +105,7 @@
             console.log("window loaded!");
         });
 
+        //Cuando el DOM esté completamente cargado, sin esperar a que se carguen imágenes, hojas de estilo, etc.
         document.addEventListener('DOMContentLoaded', function () {
             const p = document.createElement("p");
             time = document.createTextNode(`DOMContentLoaded! Time: ${(new Date()).toLocaleString()}`);

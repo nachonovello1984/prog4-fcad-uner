@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background-color: #fafafa;
+}
+
+.contenedor {
+    padding: 1rem 2rem;
+}
+
+.contenedor-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+}
+
+header {
+    background-color: #545454;
+    border-bottom: 0.5rem solid #474747;
+}
+
+img.logo {
+    margin-right: 2rem;
+    height: 100px;
+}
+
+header h1 {
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header h1 span.cuatro::before {
+    content: "4";
+
+    display: inline-block;
+    position: relative;
+
+    top: -8px;
+    left: 0px;
+    
+    color: white;
+    transform: rotate(-45deg);
+}
+
+header h1 span.cuatro {
+    position: relative;
+    display: inline-block;
+
+    top: 10px;
+
+    padding: 1rem;
+    width: 1rem;
+    height: 1rem;
+
+    background-color: #FF751F;
+    border-radius: 8px;
+
+    transform: rotate(45deg);
+}
+
+main {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main h2,
+main h3 {
+    margin: 1rem 0 1.5rem 0;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main h4 {
+    margin: 0.75rem 0 1rem 0;
+    color: orangered;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main ul {
+    margin: 2.5rem 0 2.5rem 2.5rem;
+}
+
+main p,
+main li a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none
+}
+
+main p,
+main li {
+    margin-bottom: 0.5rem;
+    color: #0B1623
+}
+
+main li a,
+main li a:hover,
+main li a:active,
+main li a:focus,
+main li a:visited {
+    position: relative;
+    display: inline-block;
+    color: #222;
+    cursor: pointer;
+}
+
+main li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    /* Grosor del subrayado */
+    background-color: orangered;
+    /* Color del subrayado */
+    transition: width 0.5s ease;
+    /* Duración y función de la transición */
+}
+
+main li a:hover::before {
+    width: 100%;
+    /* Ancho completo */
+}
+
+
+table {
+    border-collapse: collapse;
+}
+
+table tr:nth-child(even) {
+    background-color: white;
+}
+
+table tr:nth-child(odd) {
+    background-color: #ededed;
+}
+
+table th,
+table td {
+    padding: 0.5rem 1rem;
+    border: 0px;
+}
+
+
+nav{    
+    display: flex;
+    justify-content: center;
+    background-color: #474747;
+    border-bottom: 0.5rem solid #474747;   
+}
+
+nav div.contenedor {
+    width: 80%;
+    min-width: 300px;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+
+    list-style-type: none;
+}
+
+nav ul li a,
+nav ul li a:link,
+nav ul li a:visited,
+nav ul li a:active,
+nav ul li a:focus {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+nav ul li a:hover{
+    color: white;
+    background-color: #6f6f6f;
+}
+
+div.resultados li{
+    color: orangered;
+}

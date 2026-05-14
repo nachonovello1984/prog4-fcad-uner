@@ -2,6 +2,9 @@ import express from 'express';
 const app = express();
 const port = 3004;
 
+
+app.use(express.json());
+
 const cursos = [
     {
         idCurso: 1,
@@ -56,6 +59,23 @@ app.get('/', (req, res) => {
 
 app.get('/cursos', (req, res) => {
     res.json(cursos);
+});
+
+app.get('/cursos/:id', (req, res) => {
+    const idCurso = parseInt(req.params.id);
+    const curso = cursos.find(c => c.idCurso === idCurso);
+    if (curso) {
+        res.json(curso);
+    } else {
+        res.status(404).json({ error: 'Curso no encontrado' });
+    }
+});
+
+app.post('/cursos/', (req, res) => {
+    const nuevoCurso = req.body;
+    cursos.push(nuevoCurso);
+    console.log('cursos:', cursos);
+    res.status(201).json(nuevoCurso);
 });
 
 app.listen(port, () => console.log(`Servidor API Rest iniciado en http://localhost:${port}`));

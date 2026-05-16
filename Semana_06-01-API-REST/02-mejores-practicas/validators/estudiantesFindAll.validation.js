@@ -24,7 +24,7 @@ const estudiantesFindAllValidation = [
         .toInt(),
     query('order')
         .optional()
-        .isIn(['documento', 'apellido', 'nombres', 'email']).withMessage('order debe ser uno de los siguientes valores: documento, apellido, nombres, email'),
+        .isIn(['idEstudiante', 'documento', 'apellido', 'nombres', 'email']).withMessage('order debe ser uno de los siguientes valores: documento, apellido, nombres, email'),
     query('asc')
         .optional()
         .isBoolean().withMessage('asc debe ser un valor booleano'),

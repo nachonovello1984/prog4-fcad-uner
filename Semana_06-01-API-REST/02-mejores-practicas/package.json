@@ -1,5 +1,5 @@
 {
-  "name": "Mejores prácticas: DTO, Paginación, Filtrado y Ordenación",
+  "name": "mejores-practicas-dto-paginacion-filtrado-y-ordenacion",
   "version": "1.0.0",
   "description": "Este es un ejemplo funcional completo de la implementación del endpoint `GET /estudiantes` con toda la arquitectura en capas.",
   "main": "index.js",
@@ -11,10 +11,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apicache": "^1.6.3",
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "express-validator": "^7.3.2",
-    "pg": "^8.20.0"
+    "helmet": "^8.1.0",
+    "pg": "^8.20.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   },
   "type": "module"
 }

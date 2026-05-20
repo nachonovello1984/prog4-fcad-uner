@@ -46,7 +46,7 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 // CONFIGURACIÓN SESIONES
 //***********
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 
 app.use(session({
     secret: process.env.SESSION_SECRET,

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/estilo.css" />
+    <title>{{{title}}}</title>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor contenedor-flex">
+            <h1>Programación <span class="cuatro"></span></h1>
+            <img class="logo" src="/img/fcad-uner-70.png" alt="Logo FCAD-UNER 70 años" />
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/" {{#if (eq title 'Inicio' )}} class="active" {{/if}}>Inicio</a></li>
+            <li><a href="/institucional" {{#if (eq title 'Institucional' )}} class="active" {{/if}}>Institucional</a>
+            </li>
+            <li><a href="/contacto" {{#if (eq title 'Contacto' )}} class="active" {{/if}}>Contacto</a></li>
+            <li><a href="/login" {{#if (eq title 'Login' )}} class="active" {{/if}}>Login</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="alert alert-danger">{{ message }}</div>
+        {{{body}}}
+    </main>
+</body>
+
+</html>
+
+</body>
+
+</html>

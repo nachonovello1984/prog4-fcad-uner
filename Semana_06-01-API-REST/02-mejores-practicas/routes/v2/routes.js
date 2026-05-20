@@ -8,7 +8,7 @@ const router = express.Router();
 const estudiantesController = new EstudiantesController();
 
 /**
- * @swagger
+ * @openapi
  * components:
  *   schemas:
  *     Estudiante:
@@ -73,7 +73,7 @@ const estudiantesController = new EstudiantesController();
  *         error: "Estudiante no encontrado"
  */
 
-/** @swagger
+/** @openapi
  * /api/estudiantes:
  *   get:
  *     summary: Obtiene una lista de estudiantes con paginación, filtrado y ordenación

@@ -1,0 +1,10 @@
+{
+  "name": "sockets",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "server": "node --env-file=.env server.js",
+    "client": "node --env-file=.env client.js"
+  }
+}

@@ -1,3 +1,4 @@
 node_modules/
 dist/
 target/
+/Semana_06-01-API-REST/08_oauth/api/.env

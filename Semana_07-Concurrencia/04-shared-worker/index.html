@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared Worker - Cliente</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .client-id {
+            text-align: center;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .info-box h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+        
+        .stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .stat:last-child {
+            border-bottom: none;
+        }
+        
+        .stat-label {
+            font-weight: bold;
+            color: #495057;
+        }
+        
+        .stat-value {
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        button {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 15px;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        #messages {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        
+        .message {
+            padding: 8px;
+            margin-bottom: 5px;
+            background: white;
+            border-radius: 5px;
+            border-left: 3px solid #667eea;
+        }
+        
+        .message.received {
+            border-left-color: #28a745;
+        }
+        
+        .message.sent {
+            border-left-color: #ffc107;
+        }
+        
+        .instruction {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #0066cc;
+        }
+        
+        .instruction strong {
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔗 Shared Worker Demo</h1>
+        <div class="client-id" id="clientId"></div>
+        
+        <div class="instruction">
+            <strong>💡 Instrucción:</strong> Abre esta página en múltiples pestañas o ventanas del navegador. 
+            Todos los clientes compartirán el mismo worker y verás cómo se sincronizan los contadores.
+        </div>
+        
+        <div class="info-box">
+            <h3>📊 Estado del Shared Worker</h3>
+            <div class="stat">
+                <span class="stat-label">Conexiones activas:</span>
+                <span class="stat-value" id="connections">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Mensajes totales:</span>
+                <span class="stat-value" id="messageCount">0</span>
+            </div>
+        </div>
+        
+        <button id="incrementBtn">➕ Incrementar Contador</button>
+        <button id="statusBtn">🔄 Actualizar Estado</button>
+        
+        <h3>📨 Registro de Mensajes</h3>
+        <div id="messages"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

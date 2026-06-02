@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Bucle Intensivo - Sin Workers (Bloqueante)</title>
+    <script src="index.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        .warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .demo-section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+        
+        #coin {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+            margin-right: 10px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        button:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+        
+        #resultado {
+            margin-top: 20px;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #007bff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .counter {
+            font-size: 48px;
+            font-weight: bold;
+            color: #28a745;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .test-button {
+            background-color: #28a745;
+            margin-left: 10px;
+        }
+        
+        .test-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔄 Bucle Intensivo - Sin Web Workers</h1>
+        
+        <div class="warning">
+            <strong>⚠️ Advertencia:</strong> Este ejemplo NO usa Web Workers. 
+            El cálculo bloqueará completamente la interfaz del navegador.
+        </div>
+        
+        <div class="demo-section">
+            <h3>Indicador de UI Responsiva:</h3>
+            <div class="counter" id="counter">0</div>
+            <p>Este contador se actualiza cada 100ms. Si se detiene, la UI está bloqueada.</p>
+        </div>
+        
+        <div class="demo-section">
+            <h3>Prueba de Interactividad:</h3>
+            <button class="test-button" id="test-button">Haz clic aquí durante el cálculo</button>
+            <p id="click-count">Clics registrados: 0</p>
+        </div>
+        
+        <hr style="margin: 30px 0;">
+        
+        <h3>Ejecutar Cálculo Intensivo:</h3>
+        <form id="coin-form">
+            <input type="number" id="coin" placeholder="Iteraciones (ej: 100000000)" value="100000000" autocomplete="off">
+            <button type="submit">Ejecutar Cálculo (¡Bloqueará la UI!)</button>
+        </form>
+        
+        <p id="resultado"></p>
+    </div>
+</body>
+</html>

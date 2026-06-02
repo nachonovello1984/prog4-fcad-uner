@@ -1,0 +1,10 @@
+{
+  "name": "node-calculo-intenso",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Cálculo intensivo SIN worker_threads en Node.js usando ESM",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  }
+}

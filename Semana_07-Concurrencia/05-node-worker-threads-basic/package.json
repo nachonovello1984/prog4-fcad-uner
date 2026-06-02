@@ -1,0 +1,10 @@
+{
+  "name": "worker-threads-basic",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Ejemplo básico de worker_threads en Node.js con ESM",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  }
+}

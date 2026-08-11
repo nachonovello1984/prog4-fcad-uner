@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../common/css/estilo.css" type="text/css" rel="stylesheet" media="screen" />
+    <title>CSS - Animaciones | FCAD | UNER</title>
+    <style type="text/css" media="screen">
+        div.animacion {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            -webkit-animation-name: animacionTest; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+            animation-name: animacionTest;
+            animation-duration: 4s;
+        }
+
+        /* Chrome, Safari, Opera */
+        @-webkit-keyframes animacionTest {
+            0%   {background-color: red;}
+            25%  {background-color: yellow;}
+            50%  {background-color: blue;}
+            100% {background-color: green;}
+        }
+
+        /* Standard syntax */
+        @keyframes animacionTest {
+            0%   {background-color: red;}
+            25%  {background-color: yellow;}
+            50%  {background-color: blue;}
+            100% {background-color: green;}
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor contenedor-flex">
+            <h1>Programación <span class="cuatro"></span></h1>
+            <img class="logo" src="../common/img/fcad-uner-70.png" alt="Logo FCAD-UNER 70 años" />
+        </div>
+    </header>
+
+    <div class="animacion"></div>
+
+    <ul>
+        <li><a href="index.html">Volver al inicio.</a></li>
+    </ul>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>

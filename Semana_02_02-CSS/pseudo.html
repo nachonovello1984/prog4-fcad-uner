@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../common/css/estilo.css" type="text/css" rel="stylesheet" media="screen" />
+    <title>CSS - Pseudoelementos y pseudoclases | FCAD | UNER</title>
+    <style type="text/css" media="screen">
+        ul.pseudo-lista {
+            color: black;
+        }
+
+        ul.pseudo-lista li:first-child a {
+            color: red;
+        }
+
+        ul.pseudo-lista a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        ul.pseudo-lista a:link,
+        ul.pseudo-lista a:visited,
+        ul.pseudo-lista a.active,
+        ul.pseudo-lista a:hover {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        p.pseudo-texto {
+            color: black;
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+            text-decoration: none;
+        }
+
+        p.pseudo-texto::before {
+            content: "Texto Antes";
+            color: blue;
+        }
+
+        p.pseudo-texto::after {
+            content: "Texto Después";
+            color: blue;
+        }
+
+        th, td{
+            padding: 0.5rem 1rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor contenedor-flex">
+            <h1>Programación <span class="cuatro"></span></h1>
+            <img class="logo" src="../common/img/fcad-uner-70.png" alt="Logo FCAD-UNER 70 años" />
+        </div>
+    </header>
+
+    <ul class="pseudo-lista">
+        <li><a href="#">Enlace 1</a></li>
+        <li><a href="#">Enlace 2</a></li>
+        <li><a href="#">Enlace 3</a></li>
+        <li><a href="#">Enlace 4</a></li>
+        <li><a href="#">Enlace 5</a></li>
+    </ul>
+
+    <p class="pseudo-texto">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus maximus enim vitae turpis scelerisque, a
+        finibus diam malesuada. Integer cursus, libero at maximus pellentesque, ligula magna commodo mi, at ornare massa
+        tortor vitae elit. Cras semper, urna non convallis luctus, quam velit pulvinar libero, id bibendum lacus diam in
+        orci. Maecenas nulla mi, tempor in eros non, bibendum cursus tellus. Proin porta, dolor in ultrices molestie,
+        nibh mi sollicitudin orci, pulvinar venenatis sem velit a mi. Morbi tincidunt elementum ultricies. Donec sem
+        elit, porttitor at dui id, dignissim sollicitudin est. Ut dictum, dolor vel interdum rutrum, ipsum quam feugiat
+        lectus, et aliquam quam libero in augue. Nam congue consequat elit vel commodo. Vivamus egestas vel arcu sit
+        amet lobortis
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>País</th>
+                <th>Capital</th>
+                <th>Moneda</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Argentina</td>
+                <td>Buenos Aires</td>
+                <td>Peso argentino</td>
+            </tr>
+            <tr>
+                <td>Brasil</td>
+                <td>Brasilia</td>
+                <td>Real brasileño</td>
+            </tr>
+            <tr>
+                <td>Chile</td>
+                <td>Santiago</td>
+                <td>Peso chileno</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>Bogotá</td>
+                <td>Peso colombiano</td>
+            </tr>
+            <tr>
+                <td>Ecuador</td>
+                <td>Quito</td>
+                <td>Dólar estadounidense</td>
+            </tr>
+            <tr>
+                <td>México</td>
+                <td>Ciudad de México</td>
+                <td>Peso mexicano</td>
+            </tr>
+            <tr>
+                <td>Perú</td>
+                <td>Lima</td>
+                <td>Sol peruano</td>
+            </tr>
+            <tr>
+                <td>Uruguay</td>
+                <td>Montevideo</td>
+                <td>Peso uruguayo</td>
+            </tr>
+            <tr>
+                <td>Venezuela</td>
+                <td>Caracas</td>
+                <td>Bolívar soberano</td>
+            </tr>
+            <tr>
+                <td>Bolivia</td>
+                <td>La Paz</td>
+                <td>Boliviano</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li><a href="index.html">Volver al inicio.</a></li>
+    </ul>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>

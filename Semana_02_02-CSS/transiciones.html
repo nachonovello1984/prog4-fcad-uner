@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../common/css/estilo.css" type="text/css" rel="stylesheet" media="screen" />
+    <title>CSS Transiciones | FCAD | UNER</title>
+    <style type="text/css" media="screen">
+        div.basico {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s;
+        }
+
+        div.basico:hover {
+            width: 300px;
+        }
+
+        div.transicion-rotacion{
+            position: relative;
+
+            left: 0px;
+            top: 0px;
+
+            width: 100px;
+            height: 100px;
+            background: blue;
+
+            transition: transform 6s;
+        }
+
+        div.transicion-rotacion:hover {
+            transform: translate(1000px, 0%) rotate(180deg); /* Standard syntax */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor contenedor-flex">
+            <h1>Programación <span class="cuatro"></span></h1>
+            <img class="logo" src="../common/img/fcad-uner-70.png" alt="Logo FCAD-UNER 70 años" />
+        </div>
+    </header>
+
+    <div class="basico"></div>
+    <div class="transicion-rotacion"></div>
+
+    <ul>
+        <li><a href="index.html">Volver al inicio.</a></li>
+    </ul>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>

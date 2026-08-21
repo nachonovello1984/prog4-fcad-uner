@@ -13,11 +13,9 @@ p.wordSpacing{
 
 p.textAlign{
     text-align: left;
-/*
     text-align: center;
-    text-align: right;
-    text-align: justify;
-*/
+    /*text-align: right;
+    text-align: justify;*/
 }
 
 p.textDecoration{

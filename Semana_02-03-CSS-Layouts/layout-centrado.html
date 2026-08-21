@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML y CSS: Centrado de elementos Vertical y Horizontal</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+        }
+
+        div.contenedor {
+            margin: 2rem;
+
+            width: auto;
+            min-height: 100vh;
+
+            background: #d0cece;
+
+            border: 2px solid gray;
+            border-radius: 6px;
+        }
+
+        div.contenedor-flex {
+            display: flex;
+
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+
+        div.contenedor-grid {
+            display: grid;
+            place-items: center;
+        }
+
+        div.contenedor div.logo {
+            width: 200px;
+            height: 200px;
+            background: url('../common/img/prog4.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+
+            animation: rotar 10s linear infinite;
+        }
+
+        @keyframes rotar {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor contenedor-flex">
+        <div class="logo" title="Programación IV"></div>
+    </div>
+
+    <div class="contenedor contenedor-grid">
+        <div class="logo" title="Programación IV"></div>
+    </div>
+</body>
+
+</html>

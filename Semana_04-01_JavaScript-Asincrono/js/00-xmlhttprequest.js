@@ -64,6 +64,5 @@ function buscarJugadores() {
       xhr.send();
     }
 
-document.getElementById("llenar-tabla")
-.addEventListener("click", buscarJugadores);
+document.getElementById("llenar-tabla").addEventListener("click", buscarJugadores);
     

@@ -22,12 +22,12 @@ const actualizarTabla = (jugadores) => {
 
         resultados.appendChild(tr);
     });
-}
+};
 
 const ocultarError = () => {
     let elementError = document.getElementById("error");
     elementError.style.display = "none";
-}
+};
 
 const actualizarError = (error) => {
     let elementError = document.getElementById("error");
@@ -39,12 +39,29 @@ const actualizarError = (error) => {
     elementError.style.marginBottom = "1rem";
     elementError.style.borderRadius = "8px";
     elementError.style.fontFamily = "Arial, Sans-serif";
-}
+};
+
+const agregarLoading = () => {
+    const img = document.createElement("img");
+    img.id = "loading";
+    img.src = "img/loading.gif";
+    const padre = document.getElementsByTagName("table")[0].parentNode;
+    padre.insertBefore(img, document.getElementsByTagName("table")[0]);
+};
+
+const quitarLoading = () => {
+    const loading = document.getElementById("loading");
+    const padre = loading.parentNode;
+    padre.removeChild(loading);
+};
 
 document.getElementById("llenar-tabla-normal").addEventListener("click", () => {
     console.log("Asíncrono");
     console.log("antes...");
 
+    const resultados = document.getElementsByTagName("tbody")[0];
+    borrarHijos(resultados);
+    
     fetch("datos/jugadores.json").then(response => {
         if (!response.ok) {
             actualizarError("Error al consultar");
@@ -83,6 +100,10 @@ document.getElementById("llenar-tabla-async-await").addEventListener("click", as
     console.log("Async & Await");
     console.log("antes...");
 
+    const resultados = document.getElementsByTagName("tbody")[0];
+    borrarHijos(resultados);
+    agregarLoading(resultados);
+
     let promise = new Promise((resolve, reject) => {
         setTimeout(async () => {
             const response = await fetch("datos/jugadores.json");
@@ -96,7 +117,8 @@ document.getElementById("llenar-tabla-async-await").addEventListener("click", as
             actualizarTabla(datos)
             console.log("terminé DOM");
             resolve("terminé!");
-        }, 1000)
+            quitarLoading();
+        }, 1000);
     });
 
     let resultado = await promise; 

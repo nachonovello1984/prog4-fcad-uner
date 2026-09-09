@@ -2,115 +2,181 @@
     {
         "dorsal": 1,
         "nacionalidad": "POR",
-        "nombre": "Ederson",
+        "nombre": "Alisson Becker",
+        "edad": 33
+    },
+    {
+        "dorsal": 25,
+        "nacionalidad": "POR",
+        "nombre": "Giorgi Mamardashvili",
+        "edad": 25
+    },
+    {
+        "dorsal": 28,
+        "nacionalidad": "POR",
+        "nombre": "Freddie Woodman",
         "edad": 29
     },
     {
-        "dorsal": 5,
-        "nacionalidad": "DEF",
-        "nombre": "John Stones",
-        "edad": 28
-    },
-    {
-        "dorsal": 3,
-        "nacionalidad": "DEF",
-        "nombre": "Rúben Dias",
-        "edad": 29
-    },
-    {
-        "dorsal": 5,
-        "nacionalidad": "DEF",
-        "nombre": "Aymeric Laporte",
-        "edad": 28
-    },
-    {
-        "dorsal": 6,
-        "nacionalidad": "DEF",
-        "nombre": "Nathan Aké",
-        "edad": 28
-    },
-    {
-        "dorsal": 16,
-        "nacionalidad": "MED",
-        "nombre": "Rodri",
-        "edad": 26
-    },
-    {
-        "dorsal": 8,
-        "nacionalidad": "MED",
-        "nombre": "İlkay Gündoğan",
-        "edad": 32
-    },
-    {
-        "dorsal": 17,
-        "nacionalidad": "MED",
-        "nombre": "Kevin De Bruyne",
-        "edad": 31
-    },
-    {
-        "dorsal": 9,
-        "nacionalidad": "DEL",
-        "nombre": "Erling Haaland",
-        "edad": 22
-    },
-    {
-        "dorsal": 18,
-        "nacionalidad": "DEL",
-        "nombre": "Julián Álvarez",
-        "edad": 23
+        "dorsal": 56,
+        "nacionalidad": "POR",
+        "nombre": "Vitezslav Jaros",
+        "edad": 25
     },
     {
         "dorsal": 2,
         "nacionalidad": "DEF",
-        "nombre": "Kyle Walker",
-        "edad": 32
+        "nombre": "Joe Gomez",
+        "edad": 29
     },
     {
         "dorsal": 4,
         "nacionalidad": "DEF",
-        "nombre": "Kalvin Phillips",
-        "edad": 27
+        "nombre": "Virgil van Dijk",
+        "edad": 35
     },
     {
-        "dorsal": 10,
-        "nacionalidad": "DEL",
-        "nombre": "Jack Grealish",
-        "edad": 27
+        "dorsal": 5,
+        "nacionalidad": "DEF",
+        "nombre": "Jeremy Jacquet",
+        "edad": 21
     },
     {
-        "dorsal": 18,
-        "nacionalidad": "POR",
-        "nombre": "Stefan Ortega",
-        "edad": 30
+        "dorsal": 6,
+        "nacionalidad": "DEF",
+        "nombre": "Milos Kerkez",
+        "edad": 22
     },
     {
-        "dorsal": 20,
-        "nacionalidad": "MED",
-        "nombre": "Bernardo Silva",
-        "edad": 30
+        "dorsal": 12,
+        "nacionalidad": "DEF",
+        "nombre": "Conor Bradley",
+        "edad": 23
+    },
+    {
+        "dorsal": 15,
+        "nacionalidad": "DEF",
+        "nombre": "Giovanni Leoni",
+        "edad": 19
     },
     {
         "dorsal": 21,
         "nacionalidad": "DEF",
-        "nombre": "Sergio Gómez",
-        "edad": 22
+        "nombre": "Kostas Tsimikas",
+        "edad": 30
     },
     {
-        "dorsal": 25,
+        "dorsal": 30,
         "nacionalidad": "DEF",
-        "nombre": "Manuel Akanji",
+        "nombre": "Jeremie Frimpong",
+        "edad": 25
+    },
+    {
+        "dorsal": 33,
+        "nacionalidad": "DEF",
+        "nombre": "Ronald Araujo",
         "edad": 27
     },
     {
-        "dorsal": 26,
-        "nacionalidad": "DEL",
-        "nombre": "Riyad Mahrez",
-        "edad": 32
+        "dorsal": 47,
+        "nacionalidad": "DEF",
+        "nombre": "Calvin Ramsay",
+        "edad": 23
     },
     {
-        "dorsal": 32,
+        "dorsal": 3,
         "nacionalidad": "MED",
-        "nombre": "Máximo Perrone",
+        "nombre": "Wataru Endo",
+        "edad": 33
+    },
+    {
+        "dorsal": 7,
+        "nacionalidad": "MED",
+        "nombre": "Florian Wirtz",
+        "edad": 23
+    },
+    {
+        "dorsal": 8,
+        "nacionalidad": "MED",
+        "nombre": "Dominik Szoboszlai",
+        "edad": 25
+    },
+    {
+        "dorsal": 10,
+        "nacionalidad": "MED",
+        "nombre": "Alexis Mac Allister",
+        "edad": 27
+    },
+    {
+        "dorsal": 19,
+        "nacionalidad": "MED",
+        "nombre": "Harvey Elliott",
+        "edad": 23
+    },
+    {
+        "dorsal": 38,
+        "nacionalidad": "MED",
+        "nombre": "Ryan Gravenberch",
+        "edad": 24
+    },
+    {
+        "dorsal": 43,
+        "nacionalidad": "MED",
+        "nombre": "Stefan Bajcetic",
+        "edad": 21
+    },
+    {
+        "dorsal": 53,
+        "nacionalidad": "MED",
+        "nombre": "James McConnell",
+        "edad": 21
+    },
+    {
+        "dorsal": 9,
+        "nacionalidad": "DEL",
+        "nombre": "Alexander Isak",
+        "edad": 26
+    },
+    {
+        "dorsal": 14,
+        "nacionalidad": "DEL",
+        "nombre": "Federico Chiesa",
+        "edad": 28
+    },
+    {
+        "dorsal": 18,
+        "nacionalidad": "DEL",
+        "nombre": "Cody Gakpo",
+        "edad": 27
+    },
+    {
+        "dorsal": 22,
+        "nacionalidad": "DEL",
+        "nombre": "Hugo Ekitike",
+        "edad": 24
+    },
+    {
+        "dorsal": 23,
+        "nacionalidad": "DEL",
+        "nombre": "Victor Munoz",
+        "edad": 23
+    },
+    {
+        "dorsal": 29,
+        "nacionalidad": "DEL",
+        "nombre": "Bradley Barcola",
+        "edad": 24
+    },
+    {
+        "dorsal": 67,
+        "nacionalidad": "DEL",
+        "nombre": "Lewis Koumas",
         "edad": 20
+    },
+    {
+        "dorsal": 73,
+        "nacionalidad": "DEL",
+        "nombre": "Rio Ngumoha",
+        "edad": 18
     }
 ]

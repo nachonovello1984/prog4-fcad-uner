@@ -1,3 +1,9 @@
+:root{
+    --font-color-primary: white;
+    --bg-color-primary: orangered;
+    --bg-color-primary-hover: rgb(246, 104, 53);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -192,4 +198,24 @@ nav ul li a:hover{
 
 div.resultados li{
     color: orangered;
+}
+
+.btn{
+    color: var(--font-color-primary);
+    background-color: var(--bg-color-primary);
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.btn:hover{
+    background-color: var(--bg-color-primary-hover);
+}
+
+.btn-primary {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+hr{
+    border: 1px solid orange;
 }

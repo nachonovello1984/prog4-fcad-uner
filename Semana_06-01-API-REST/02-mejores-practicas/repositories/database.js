@@ -12,6 +12,12 @@ const pool = new Pool({
 });
 
 export default class BdUtils {
+    // Consulta simple: el pool toma y libera la conexión solo.
+    static async query(sql, params) {
+        return pool.query(sql, params);
+    }
+
+    // Solo para transacciones (BEGIN/COMMIT): quien la use debe hacer client.release().
     static async createConnection() {
         return await pool.connect();
     }

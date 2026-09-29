@@ -6,8 +6,5 @@ export default class EstudianteResponseDTO {
         this.nombres = estudiante.nombres;
         this.email = estudiante.email;
         this.fechaNacimiento = estudiante.fecha_nacimiento;
-        this.activo = estudiante.activo;
-        this.idUsuarioModificacion = estudiante.id_usuario_modificacion;
-        this.fechaHoraModificacion = estudiante.fecha_hora_modificacion;
     }
 }

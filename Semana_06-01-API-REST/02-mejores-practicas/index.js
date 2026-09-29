@@ -3,6 +3,7 @@ import cors from 'cors';
 import helmet from "helmet";
 import swaggerUi from "swagger-ui-express";
 import swaggerJsdoc from "swagger-jsdoc";
+import routerV1 from './routes/v1/routes.js';
 import routerV2 from './routes/v2/routes.js';
 
 const app = express();
@@ -26,7 +27,7 @@ const swaggerOptions = {
             version: '1.0.0',
             description: 'Mejores prácticas: DTO, Paginación, Filtrado y Ordenación',
         },
-        servers: [ { url: `http://localhost:${process.env.PORT || 3000}` } ],
+        servers: [ { url: `http://localhost:${process.env.PORT || 3000}/api/` } ],
     },
     apis: ['./routes/v2/*.js'],
 };
@@ -34,6 +35,8 @@ const swaggerOptions = {
 const swaggerDocs = swaggerJsdoc(swaggerOptions);
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 app.use('/api', routerV2);
+app.use('/api/v2', routerV2);
+app.use('/api/v1', routerV1);
 
 const port = process.env.PORT || 3000;
 

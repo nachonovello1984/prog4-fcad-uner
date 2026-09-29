@@ -1,5 +1,11 @@
 import { query, validationResult } from 'express-validator';
-const estudiantesFindAllValidation = [
+const inscripcionesFindAllValidation = [
+    query('idCurso')
+        .optional()
+        .isInt().withMessage('idCurso debe ser un entero'),
+    query('descripcionCurso')
+        .optional()
+        .isString().withMessage('descripcionCurso debe ser una cadena de texto'),
     query('documento')
         .optional()
         .isString().withMessage('documento debe ser una cadena de texto'),
@@ -24,7 +30,7 @@ const estudiantesFindAllValidation = [
         .toInt(),
     query('order')
         .optional()
-        .isIn(['documento', 'apellido', 'nombres', 'email']).withMessage('order debe ser uno de los siguientes valores: documento, apellido, nombres, email'),
+        .isIn(['idCurso', 'descripcionCurso', 'documento', 'apellido', 'nombres']).withMessage('order debe ser uno de los siguientes valores: idCurso, descripcionCurso, documento, apellido, nombres'),
     query('asc')
         .optional()
         .isBoolean().withMessage('asc debe ser un valor booleano'),
@@ -37,4 +43,4 @@ const estudiantesFindAllValidation = [
     }
 ];
 
-export default estudiantesFindAllValidation;
+export default inscripcionesFindAllValidation;

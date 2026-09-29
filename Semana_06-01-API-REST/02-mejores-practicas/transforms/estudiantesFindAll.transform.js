@@ -1,20 +1,18 @@
 const estudiantesFindAllTransform = (req, res, next) => {
-    req.limit = req.query.limit ? Number(req.query.limit) : 0;
-    req.offset = req.query.offset ? Number(req.query.offset) : 0;
+    const { documento, apellido, nombres, email, order, asc, limit, offset } = req.query;
 
-    const filterObj = {};
-    const orderObj = {idEstudiante : "ASC"};
-
-    const { documento, apellido, nombres, email, order } = req.query;
-
-    if (documento) filterObj.documento = documento;
-    if (apellido) filterObj.apellido = apellido;
-    if (nombres) filterObj.nombres = nombres;
-    if (email) filterObj.email = email;
-    if (order) orderObj[order] = req.query.asc === "true" ? "ASC" : "DESC";
-
-    req.filter = filterObj;
-    req.order = orderObj;
+    req.criteria = {
+        documento,
+        apellido,
+        nombres,
+        email,
+        order,
+        // Si no se indica, el orden es ascendente.
+        asc: asc !== 'false',
+        // Si no se indica limit no hay paginación (null = sin límite).
+        limit: limit ? Number(limit) : null,
+        offset: offset ? Number(offset) : 0
+    };
 
     next();
 };

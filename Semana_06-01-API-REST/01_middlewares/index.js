@@ -35,8 +35,8 @@ app.get('/', (_, res) => {
 
 
 app.get('/saludar-con-middleware1', middlewareControlNombre1, (req, res) => {
-  const nombre = req.query.nombre;
-  res.json({ mensaje: `Hola ${nombre} pasó el filtro del middleware 1` });
+  const nombre = req.nombreProcesado;
+  res.json({ mensaje: `Hola ${nombreProcesado} pasó el filtro del middleware 1` });
 });
 
 app.get('/saludar-con-middleware2', middlewareControlNombre2, (req, res) => {

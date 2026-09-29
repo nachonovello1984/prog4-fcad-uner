@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "ProgIV - Mejores Prácticas",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

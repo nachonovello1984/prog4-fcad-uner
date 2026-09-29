@@ -13,7 +13,7 @@ export default class EstudiantesRepository {
         if (filter && Object.keys(filter).length > 0) {
             Object.entries(filter).forEach(([key, value]) => {
                 if (typeof value === 'string') {
-                    strWhere += `AND ${key} LIKE '%${value}%'`
+                    strWhere += `AND ${key} ILIKE '%${value}%'`
                 } else {
                     strWhere += `AND ${key} = ${value}`
                 }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alumnos - localStorage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Alumnos</h1>
+
+    <form id="form-alumno">
+      <label>
+        Apellido
+        <input type="text" id="apellido" required>
+      </label>
+      <label>
+        Nombre
+        <input type="text" id="nombre" required>
+      </label>
+      <label>
+        Documento
+        <input type="text" id="documento" inputmode="numeric" pattern="[0-9]{6,9}" title="Entre 6 y 9 dígitos" required>
+      </label>
+      <label>
+        Fecha de nacimiento
+        <input type="date" id="fechaNacimiento" required>
+      </label>
+      <button type="submit">Guardar</button>
+    </form>
+
+    <p id="mensaje" role="alert"></p>
+
+    <table id="tabla-alumnos">
+      <thead>
+        <tr>
+          <th>Apellido</th>
+          <th>Nombre</th>
+          <th>Documento</th>
+          <th>Fecha de nacimiento</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <p id="vacio">No hay alumnos guardados.</p>
+  </main>
+
+  <script type="module" src="/script.js"></script>
+</body>
+</html>

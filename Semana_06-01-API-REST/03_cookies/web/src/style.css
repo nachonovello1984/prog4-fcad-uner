@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(209, 255, 241);
+}
+
+tr:nth-child(odd) {
+  background-color: white;
+}
+
+td {
+  padding: 0.5rem 1rem;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  color: white;
+  background-color: teal;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.btn:hover,
+.btn:active {
+  color: aqua;
+  font-weight: bold;
+  background-color: teal;
+  text-decoration: none;
+}

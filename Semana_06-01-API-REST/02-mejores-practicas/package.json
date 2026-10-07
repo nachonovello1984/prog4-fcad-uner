@@ -16,9 +16,11 @@
     "express": "^5.2.1",
     "express-validator": "^7.3.2",
     "helmet": "^8.1.0",
+    "morgan": "^1.12.1",
     "pg": "^8.20.0",
     "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.1"
+    "swagger-ui-express": "^5.0.1",
+    "winston": "^3.19.0"
   },
   "type": "module"
 }

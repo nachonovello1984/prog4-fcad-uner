@@ -1,0 +1,16 @@
+meta {
+  name: Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/api/estudiantes
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}

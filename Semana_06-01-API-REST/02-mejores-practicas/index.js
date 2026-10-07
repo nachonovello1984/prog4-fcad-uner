@@ -5,12 +5,14 @@ import swaggerUi from "swagger-ui-express";
 import swaggerJsdoc from "swagger-jsdoc";
 import routerV1 from './routes/v1/routes.js';
 import routerV2 from './routes/v2/routes.js';
+import morgan from 'morgan'
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(helmet());
+app.use(morgan('dev'));
 
 const corsOptions = {
     origin: ['http://localhost:5500'], // Dominio permitido

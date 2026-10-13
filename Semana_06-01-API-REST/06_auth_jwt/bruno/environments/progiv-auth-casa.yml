@@ -1,0 +1,4 @@
+name: progiv-auth-casa
+variables:
+  - name: token
+    value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjUsImlhdCI6MTc5MTkzMTYzMCwiZXhwIjoxNzkxOTM1MjMwfQ.JLAhlyl0PD9jUy1n1rNIhVcnuoJxwYmrFuIhaBG6_Kc
